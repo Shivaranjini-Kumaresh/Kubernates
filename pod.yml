@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: helloworld1
+  namespace: demo
+spec:
+  containers:
+  - name: helloworld
+    image: devmembershipregistry.azurecr.io/helloworld:latest
+    ports:
+    - containerPort: 8080
