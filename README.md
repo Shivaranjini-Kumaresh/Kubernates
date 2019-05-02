@@ -1,5 +1,14 @@
 # Kubernates Basics
 
+In this POC we will do the following:
+
+1. Setup Environment for deploying to Kubernates
+2. Create Namespace
+3. Create Pod
+4. Create Replication Controller
+5. Create Deployment with load Balancer
+6. Create Deployment with Rolling up strategy
+
 ## Set up
 
 1. Install Kubectl by following the steps given in the link below :
@@ -9,16 +18,16 @@
 2. Login to the azure environment using service principal :
     https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli?view=azure-cli-latest
     ```Java
-     az login --service-principal -u $USERID -p $PASSWORD --tenant 3cbcc3d3-094d-4006-9849-0d11d61f484d &&
+     az login --service-principal -u $USERID -p $PASSWORD --tenant <Your Tenant Id> &&
      ```
 
 3. Set the subscription which you are going to use :
     ```Java
-    az account set --subscription "Sams Membership Platform" &&
+    az account set --subscription "<Subscription Name>" &&
     ```
 4. Get credentials to your resource group for kubernates :
     ```Java
-    az aks get-credentials --resource-group  dev-membership-aks-common --name dev-membership-common;
+    az aks get-credentials --resource-group  <Resource group name> --name <Cluster Name>;
     ```
 
 ## Details
