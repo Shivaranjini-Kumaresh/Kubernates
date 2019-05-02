@@ -18,12 +18,12 @@ In this POC we will do the following:
 2. Login to the azure environment using service principal :
     https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli?view=azure-cli-latest
     ```Java
-     az login --service-principal -u $USERID -p $PASSWORD --tenant <Your Tenant Id> &&
+     az login --service-principal -u $USERID -p $PASSWORD --tenant <Your Tenant Id>
      ```
 
 3. Set the subscription which you are going to use :
     ```Java
-    az account set --subscription "<Subscription Name>" &&
+    az account set --subscription "<Subscription Name>"
     ```
 4. Get credentials to your resource group for kubernates :
     ```Java
